@@ -9,19 +9,27 @@
 /* Begin PBXBuildFile section */
 		27AC59722A8BC4BB009567A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC59712A8BC4BB009567A2 /* AppDelegate.swift */; };
 		27AC59742A8BC4BB009567A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC59732A8BC4BB009567A2 /* SceneDelegate.swift */; };
-		27AC59762A8BC4BB009567A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC59752A8BC4BB009567A2 /* ViewController.swift */; };
 		27AC597B2A8BC4BE009567A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27AC597A2A8BC4BE009567A2 /* Assets.xcassets */; };
 		27AC597E2A8BC4BE009567A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AC597C2A8BC4BE009567A2 /* LaunchScreen.storyboard */; };
+		27AC59872A8BC807009567A2 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC59862A8BC807009567A2 /* HomePageView.swift */; };
+		27AC598A2A8BC81C009567A2 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC59892A8BC81C009567A2 /* HomePageViewController.swift */; };
+		27AC598C2A8BCBEA009567A2 /* HomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC598B2A8BCBEA009567A2 /* HomePageTableViewCell.swift */; };
+		27E9473B2A8BD18800EE016F /* DefaultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9473A2A8BD18800EE016F /* DefaultLabel.swift */; };
+		27E9473E2A8BD58B00EE016F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 27E9473D2A8BD58B00EE016F /* SnapKit */; };
+		27E947412A8BD7A500EE016F /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 27E947402A8BD7A500EE016F /* Reusable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27AC596E2A8BC4BB009567A2 /* GitHubSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AC59712A8BC4BB009567A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27AC59732A8BC4BB009567A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		27AC59752A8BC4BB009567A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27AC597A2A8BC4BE009567A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27AC597D2A8BC4BE009567A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27AC597F2A8BC4BE009567A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27AC59862A8BC807009567A2 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		27AC59892A8BC81C009567A2 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		27AC598B2A8BCBEA009567A2 /* HomePageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableViewCell.swift; sourceTree = "<group>"; };
+		27E9473A2A8BD18800EE016F /* DefaultLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27E9473E2A8BD58B00EE016F /* SnapKit in Frameworks */,
+				27E947412A8BD7A500EE016F /* Reusable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +66,39 @@
 			children = (
 				27AC59712A8BC4BB009567A2 /* AppDelegate.swift */,
 				27AC59732A8BC4BB009567A2 /* SceneDelegate.swift */,
-				27AC59752A8BC4BB009567A2 /* ViewController.swift */,
+				27AC59852A8BC7F9009567A2 /* Core */,
+				27E947392A8BD17C00EE016F /* Components */,
 				27AC597A2A8BC4BE009567A2 /* Assets.xcassets */,
 				27AC597C2A8BC4BE009567A2 /* LaunchScreen.storyboard */,
 				27AC597F2A8BC4BE009567A2 /* Info.plist */,
 			);
 			path = GitHubSample;
+			sourceTree = "<group>";
+		};
+		27AC59852A8BC7F9009567A2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				27AC59882A8BC80A009567A2 /* HomePage */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		27AC59882A8BC80A009567A2 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				27AC59862A8BC807009567A2 /* HomePageView.swift */,
+				27AC59892A8BC81C009567A2 /* HomePageViewController.swift */,
+				27AC598B2A8BCBEA009567A2 /* HomePageTableViewCell.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		27E947392A8BD17C00EE016F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				27E9473A2A8BD18800EE016F /* DefaultLabel.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +117,10 @@
 			dependencies = (
 			);
 			name = GitHubSample;
+			packageProductDependencies = (
+				27E9473D2A8BD58B00EE016F /* SnapKit */,
+				27E947402A8BD7A500EE016F /* Reusable */,
+			);
 			productName = GitHubSample;
 			productReference = 27AC596E2A8BC4BB009567A2 /* GitHubSample.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +149,10 @@
 				Base,
 			);
 			mainGroup = 27AC59652A8BC4BA009567A2;
+			packageReferences = (
+				27E9473C2A8BD58B00EE016F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				27E9473F2A8BD7A500EE016F /* XCRemoteSwiftPackageReference "Reusable" */,
+			);
 			productRefGroup = 27AC596F2A8BC4BB009567A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,8 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27AC59762A8BC4BB009567A2 /* ViewController.swift in Sources */,
+				27AC598C2A8BCBEA009567A2 /* HomePageTableViewCell.swift in Sources */,
+				27AC598A2A8BC81C009567A2 /* HomePageViewController.swift in Sources */,
+				27AC59872A8BC807009567A2 /* HomePageView.swift in Sources */,
 				27AC59722A8BC4BB009567A2 /* AppDelegate.swift in Sources */,
+				27E9473B2A8BD18800EE016F /* DefaultLabel.swift in Sources */,
 				27AC59742A8BC4BB009567A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +392,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		27E9473C2A8BD58B00EE016F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		27E9473F2A8BD7A500EE016F /* XCRemoteSwiftPackageReference "Reusable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/Reusable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		27E9473D2A8BD58B00EE016F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27E9473C2A8BD58B00EE016F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		27E947402A8BD7A500EE016F /* Reusable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27E9473F2A8BD7A500EE016F /* XCRemoteSwiftPackageReference "Reusable" */;
+			productName = Reusable;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 27AC59662A8BC4BA009567A2 /* Project object */;
 }
